@@ -21,7 +21,7 @@
                 var invitationText = invitationCard.innerText.toLowerCase();
                 console.log("Invitation text: " + invitationText);
 
-                if (invitationText.includes("month ago")) {
+                if (/\d+\s*months?\s*ago/i.test(invitationText)) {
                     invitations.push(el);  // Add button to invitations list
                     console.log("Invitation added to withdrawal list.");
                 }
